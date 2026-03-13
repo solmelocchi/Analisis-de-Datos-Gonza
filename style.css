@@ -239,21 +239,10 @@ nav a:hover { color: var(--azul); }
   margin-bottom: 6px;
 }
 
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 600px;
-  }
-}
-.cards {
-  grid-template-columns: 1fr !important;
-  max-width: 360px !important;
-}
-
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
-    max-width: 360px;
+    max-width: 400px;
   }
 }
 /* ══════════════════════════════════════
