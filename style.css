@@ -220,14 +220,6 @@ nav a:hover { color: var(--azul); }
   box-shadow: 0 8px 40px rgba(0,0,0,0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card {
-  background: white;
-  padding: 40px 32px;
-  width: 260px;
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .card:hover {
   transform: translateY(-10px);
@@ -246,10 +238,18 @@ nav a:hover { color: var(--azul); }
   color: #666;
   margin-bottom: 6px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 520px) {
   .cards {
     grid-template-columns: 1fr;
-    max-width: 420px;
+    max-width: 360px;
   }
 }
 /* ══════════════════════════════════════
