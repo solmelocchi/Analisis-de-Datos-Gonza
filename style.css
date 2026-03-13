@@ -75,7 +75,7 @@ nav a:hover { color: var(--azul); }
   min-height: 90vh;
   background:
     linear-gradient(rgba(0, 60, 130, 0.88), rgba(0, 40, 100, 0.92)),
-    url("img/hero-data.jpg") center/cover no-repeat;
+    url("hero-data.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +245,7 @@ nav a:hover { color: var(--azul); }
 .discord-section {
   background:
     linear-gradient(rgba(0, 30, 80, 0.88), rgba(0, 30, 80, 0.88)),
-    url("img/data-bg.jpg") center/cover no-repeat;
+    url("data-bg.jpg") center/cover no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -579,4 +579,5 @@ footer {
   .newsletter input { width: 100%; }
 
   section { padding: 80px 24px; }
+
 }
