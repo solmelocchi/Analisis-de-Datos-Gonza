@@ -1,0 +1,582 @@
+/* ══════════════════════════════════════
+   VARIABLES
+══════════════════════════════════════ */
+:root {
+  --azul: #0072bb;
+  --azul-dark: #005c95;
+  --azul-hero: #0a1628;
+  --neon: #c8f000;
+  --neon-dark: #a8d000;
+  --gris-claro: #f5f8fb;
+  --blanco: #ffffff;
+  --negro: #111;
+  --texto: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: var(--blanco);
+  color: var(--texto);
+}
+
+html { scroll-behavior: smooth; }
+
+section { padding: 100px 40px; }
+
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--azul);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--azul); }
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--azul);
+}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero {
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(0, 60, 130, 0.88), rgba(0, 40, 100, 0.92)),
+    url("img/hero-data.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 80px 40px;
+}
+
+.hero-label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  font-size: clamp(56px, 10vw, 100px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
+   PROMO
+══════════════════════════════════════ */
+.promo {
+  background: var(--gris-claro);
+  padding: 80px 40px;
+}
+
+.promo-inner {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.promo-pregunta {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.promo-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+.codigo {
+  display: inline-block;
+  background: var(--azul);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 12px 32px;
+  border-radius: 10px;
+  border: 3px solid var(--azul-dark);
+}
+
+/* Ticket de compra */
+.ticket {
+  background: white;
+  border-radius: 14px;
+  padding: 24px 30px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  min-width: 260px;
+  font-size: 0.95rem;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #333;
+}
+
+.ticket-row.sub { color: #888; font-size: 0.88rem; }
+.ticket-row.descuento { color: #e53935; font-size: 0.88rem; }
+.ticket-row.total { font-weight: 800; font-size: 1.1rem; color: #111; }
+
+.ticket-divider {
+  height: 1px;
+  background: #eee;
+  margin: 8px 0;
+}
+
+/* ══════════════════════════════════════
+   CURSOS – con fondo imagen
+══════════════════════════════════════ */
+.cursos {
+  text-align: center;
+  background:
+    linear-gradient(rgba(10, 22, 40, 0.82), rgba(10, 22, 40, 0.82)),
+    url("img/bg-cursos.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.cursos h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 40px 32px;
+  width: 260px;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* ══════════════════════════════════════
+   DISCORD – fondo + card flotante
+══════════════════════════════════════ */
+.discord-section {
+  background:
+    linear-gradient(rgba(0, 30, 80, 0.88), rgba(0, 30, 80, 0.88)),
+    url("img/data-bg.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 60px;
+}
+
+/* Tarjeta flotante centrada */
+.discord-float {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 24px;
+  padding: 50px 60px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discord-left h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.discord-left p {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 4px;
+}
+
+/* ══════════════════════════════════════
+   HERRAMIENTAS – fix con imágenes propias
+══════════════════════════════════════ */
+.herramientas {
+  padding: 80px 40px;
+  text-align: center;
+  background: white;
+}
+
+.herramientas h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Cada tool es una columna centrada */
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+/* La imagen del logo */
+.tool img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+/* Texto debajo del logo (ej: "Excel") */
+.btn-excel {
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: default;
+  margin: 0;
+}
+
+/* Botón "Proximamente" debajo del logo */
+.btn-prox {
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: default;
+  margin: 0;
+}
+/* ══════════════════════════════════════
+   BOTONES
+══════════════════════════════════════ */
+.btn-neon {
+  background: var(--neon);
+  color: #111;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 16px;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.btn-neon:hover { background: var(--neon-dark); transform: scale(1.04); }
+
+.btn-blue {
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 16px;
+  transition: background 0.2s;
+}
+.btn-blue:hover { background: var(--azul-dark); }
+
+/* Widget discord */
+.discord-widget {
+  background: var(--azul);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 220px;
+  box-shadow: 0 8px 30px rgba(0,114,187,0.3);
+}
+.widget-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 20px 10px;
+  font-weight: 700; font-size: 0.95rem;
+}
+.widget-icon {
+  background: #1ed760; color: white;
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 900;
+}
+.widget-members { background: #1a5fa0; padding: 14px 20px 18px; }
+.widget-count { display: block; font-size: 2.2rem; font-weight: 900; line-height: 1; }
+.widget-label { font-size: 0.8rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+
+/* newsletter form inline */
+.newsletter-form { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn-prox {
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  cursor: default;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════
+   NEWSLETTER
+══════════════════════════════════════ */
+.newsletter {
+  background: #0a1628;
+  color: white;
+  padding: 80px 60px;
+}
+
+.newsletter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.newsletter-left h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.newsletter-left p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+.newsletter-right {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 13px 18px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 0.95rem;
+  width: 240px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.newsletter input::placeholder { color: rgba(255,255,255,0.4); }
+.newsletter input:focus { border-color: var(--azul); }
+
+.newsletter-cta {
+  text-align: center;
+}
+
+.newsletter-cta h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--azul);
+  margin-bottom: 20px;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--negro);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+/* ══════════════════════════════════════
+   WHATSAPP
+══════════════════════════════════════ */
+.whatsapp {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  z-index: 999;
+  transition: transform 0.3s;
+}
+.whatsapp:hover { transform: scale(1.1); }
+.whatsapp img { width: 34px; }
+
+/* ══════════════════════════════════════
+   ANIMACIONES
+══════════════════════════════════════ */
+.animar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 16px 24px;
+    gap: 10px;
+  }
+
+  .menu-toggle { display: block; }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+    padding: 12px 0;
+  }
+  nav.active { display: flex; }
+  nav a { margin-left: 0; }
+
+  .hero h1 { font-size: 52px; }
+
+  .promo-inner { flex-direction: column; align-items: flex-start; }
+
+  .cards { flex-direction: column; align-items: center; }
+
+  .discord { flex-direction: column; text-align: center; padding: 80px 30px; }
+
+  .discord-member-bar { justify-content: center; }
+
+  .tools { gap: 36px; }
+
+  .newsletter-inner { flex-direction: column; }
+  .newsletter-right { flex-direction: column; }
+  .newsletter input { width: 100%; }
+
+  section { padding: 80px 24px; }
+}
