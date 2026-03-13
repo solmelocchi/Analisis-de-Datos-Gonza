@@ -245,6 +245,10 @@ nav a:hover { color: var(--azul); }
     max-width: 600px;
   }
 }
+.cards {
+  grid-template-columns: 1fr !important;
+  max-width: 360px !important;
+}
 
 @media (max-width: 520px) {
   .cards {
