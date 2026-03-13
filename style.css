@@ -206,12 +206,12 @@ nav a:hover { color: var(--azul); }
 }
 
 .cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
-
 .card {
   background: white;
   padding: 40px 32px;
